@@ -1,0 +1,7 @@
+.vscode
+*.dSYM
+*.ignore.*
+*.test.*
+.idea
+.DS_STORE
+._.DS_STORE
