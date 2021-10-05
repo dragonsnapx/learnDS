@@ -9,6 +9,10 @@ The top element of the stack is the only accessible element, with these methods:
 - isFull: Check if stack is full
 - Peek: Get top element
 
+My implementation had some additional methods:
+- destroyStack: calls `free()` on `malloc()`'d stack
+- resizeStack: Increases/Decreases the capacity of the stack.
+
 Uses of the stack include:
 - **Memory**: Stack-based memory
 - Expression Evaluation: Parsers, Linters, etc.

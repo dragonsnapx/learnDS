@@ -1,16 +1,14 @@
 #ifndef __STACK_H_
 #define __STACK_H_
-#define STACK_SIZE 10
 
-typedef struct {
-    int items[STACK_SIZE];   // Stack itself
-    int top;                 // Top element of stack, -1 if stack is empty
-} Stack;
+Stack* createStack(unsigned int capacity);
+void destroyStack(Stack *st);                                   // Unique method for C, variable needs memory allocation
+int resizeStack(Stack* st, unsigned int new_capacity);          // Unique method for C, resizing requires memory reallocation
 
-void createEmptyStack(Stack* st);
 int isStackFull(Stack* st);
 int isStackEmpty(Stack* st);
-void push(Stack *st, int new_item);
-void printStack(Stack *st);
+int pushToStack(Stack* st, int item);
+int popStack(Stack* st);
+int peekStack(Stack* st);
 
 #endif
